@@ -1,3 +1,3 @@
-## Homepage of Alfas
+Supposed to be a blog anytime in the future.
 
-:D
+![Created by Bulma](https://bulma.io/images/made-with-bulma.png "Bulma")
