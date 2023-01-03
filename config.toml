@@ -1,0 +1,11 @@
+baseURL = "https://alfasst.github.io/"
+languageCode = "en-us"
+theme = "KeepIt"
+enableEmoji = true
+
+[params]
+title = "Alfas Esty"
+author = "Alfas Esty"
+description = "Homepage"
+
+mainSections = ["blog"]
