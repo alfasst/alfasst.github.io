@@ -1,0 +1,15 @@
+<svg width="80" height="60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      <![CDATA[
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        text {
+          font-family: 'Pacifico', cursive;
+          font-size: 30px;
+        }
+      ]]>
+    </style>
+  </defs>
+  <text x="10" y="40">alfas</text>
+</svg>
+
