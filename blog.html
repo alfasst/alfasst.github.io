@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Alfas Esty</title>
+    <!-- Bulma CSS Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply the Inter font and basic layout */
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #ffffff;
+        }
+        /* Ensure the navbar burger is visible */
+        .navbar-burger span {
+            background-color: #4a4a4a;
+        }
+        /* Make the main content section grow */
+        .main-section {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Placeholder for the navigation bar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Blog Section -->
+    <section class="section main-section">
+        <div class="container">
+            <h1 class="title is-1 has-text-centered">Blog by Alfas</h1>
+            <h2 class="subtitle is-4 has-text-centered">Thoughts, tutorials, and updates.</h2>
+            <hr>
+
+            <!-- Blog Post Entry -->
+            <div class="box">
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p class="title is-4">
+                                <a href="#">My First Blog Post</a>
+                            </p>
+                            <p class="subtitle is-6">
+                                <i>Posted on June 25, 2025</i>
+                            </p>
+                            <p>This is a summary of my first blog post. You can write a short introduction here to entice readers. The title is a link that would take them to the full article page...</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Blog Post Entry -->
+            <div class="box">
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p class="title is-4">
+                                <a href="#">A Guide to Using Bulma for Your Website</a>
+                            </p>
+                            <p class="subtitle is-6">
+                                <i>Posted on June 15, 2025</i>
+                            </p>
+                            <p>In this post, I'll walk through the basics of setting up a clean, modern website using the Bulma CSS framework, just like this one. It's simple, elegant, and requires no JavaScript to get started...</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Blog Post Entry -->
+            <div class="box">
+                <article class="media">
+                    <div class="media-content">
+                        <div class="content">
+                            <p class="title is-4">
+                                <a href="#">Reflections on a Recent Project</a>
+                            </p>
+                            <p class="subtitle is-6">
+                                <i>Posted on May 30, 2025</i>
+                            </p>
+                            <p>A look back at the challenges and learnings from a project I recently completed. I'll discuss the technical stack, the problems we faced, and the solutions we came up with...</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Placeholder for the footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Script to load reusable components -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loadComponent = (url, placeholderId) => {
+                return fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById(placeholderId).innerHTML = data;
+                    });
+            };
+
+            loadComponent('_navbar.html', 'navbar-placeholder').then(() => {
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                const navLinks = document.querySelectorAll('.navbar-item');
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === currentPage) {
+                        link.classList.add('is-active');
+                    }
+                });
+
+                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            });
+
+            loadComponent('_footer.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>
+
