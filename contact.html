@@ -10,9 +10,80 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; display: flex; flex-direction: column; min-height: 100vh; background-color: #ffffff; }
+        /* Define the new color palette */
+        :root {
+            --bg-color: #FFFFFF;
+            --text-color: #2c3e50;
+            --primary-color: #3498db;
+            --neutral-color: #ecf0f1;
+            --footer-bg-color: #fafafa;
+        }
+
+        /* Apply the new colors */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .title, .subtitle {
+            color: var(--text-color);
+        }
+
+        a {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        a:hover, .navbar-item.is-active {
+            color: var(--text-color);
+        }
+
+        /* Style key components */
+        .box {
+            background-color: var(--bg-color);
+            border: 1px solid var(--neutral-color);
+            box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.05), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+            border-radius: 8px;
+        }
+
+        .navbar {
+            border-bottom: 1px solid var(--neutral-color);
+        }
+        
+        .footer {
+            background-color: var(--footer-bg-color);
+            border-top: 1px solid var(--neutral-color);
+        }
+
+        .button.is-primary {
+            background-color: var(--primary-color);
+            border-color: transparent;
+        }
+        .button.is-primary:hover {
+            background-color: var(--text-color);
+        }
+
+        /* Page-specific styles */
         .main-section { flex-grow: 1; }
-    </style>
+        .network-svg { width: 100%; height: auto; max-width: 500px; margin: 0 auto; }
+        .publication-entry { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--neutral-color); }
+        .publication-entry:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .publication-title { font-weight: bold; }
+        .blog-container { max-width: 768px; margin: 0 auto; }
+        hr { background-color: var(--neutral-color); height: 1px; margin: 1.5rem 0; }
+        
+        /* Publication page readability improvement */
+        .publication-entry p {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .publication-entry i {
+            color: #5a6e81; /* Softer, but still high-contrast grey */
+        }
+</style>
 </head>
 <body>
 
@@ -46,32 +117,63 @@
             <h1 class="title is-1 has-text-centered">Get in Touch</h1>
             <h2 class="subtitle is-4 has-text-centered">I'd love to hear from you.</h2>
             <hr>
-            <div class="columns">
-                <div class="column is-half">
-                    <h3 class="title is-3">Contact Information</h3>
-                    <p class="subtitle is-5">The best way to reach me is by email. You can also find me on these platforms:</p>
-                    <div class="field"><p class="control has-icons-left"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p></div>
-                    <div class="field"><p class="control has-icons-left"><span class="icon is-small is-left"><i class="fab fa-github"></i></span><strong>GitHub:</strong> <a href="#" target="_blank">alfasst</a></p></div>
-                    <div class="field"><p class="control has-icons-left"><span class="icon is-small is-left"><i class="fab fa-linkedin"></i></span><strong>LinkedIn:</strong> <a href="#" target="_blank">alfasst</a></p></div>
-                    <div class="field"><p class="control has-icons-left"><span class="icon is-small is-left"><i class="fab fa-twitter"></i></span><strong>Twitter / X:</strong> <a href="#" target="_blank">@alfasst</a></p></div>
-                </div>
-                <div class="column is-half">
-                    <h3 class="title is-3">Send a Message</h3>
-                    <form action="#" method="POST">
-                        <div class="field"><label class="label">Name</label><div class="control"><input class="input" type="text" placeholder="Your Name" required></div></div>
-                        <div class="field"><label class="label">Email</label><div class="control"><input class="input" type="email" placeholder="your.email@example.com" required></div></div>
-                        <div class="field"><label class="label">Message</label><div class="control"><textarea class="textarea" placeholder="Your message here..." required></textarea></div></div>
-                        <div class="field"><div class="control"><button class="button is-primary is-fullwidth">Send Message</button></div></div>
-                    </form>
+            <div class="columns is-centered">
+                <div class="column is-two-thirds">
+                    <div class="box">
+                        <h3 class="title is-3">Contact Information</h3>
+                        <p class="subtitle is-5">
+                            The best way to reach me is by email. You can also find me on these platforms:
+                        </p>
+                        <hr style="background-color: var(--neutral-color); height: 1px; margin: 1.5rem 0;">
+                        
+                        <div class="field is-flex is-align-items-center mb-5">
+                            <span class="icon is-medium mr-4 has-text-primary">
+                                <i class="fas fa-envelope fa-lg"></i>
+                            </span>
+                            <div class="is-size-5">
+                                <strong class="mr-2">Email:</strong>
+                                <a href="mailto:your.email@example.com">your.email@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="field is-flex is-align-items-center mb-5">
+                            <span class="icon is-medium mr-4 has-text-primary">
+                                <i class="fab fa-github fa-lg"></i>
+                            </span>
+                            <div class="is-size-5">
+                                <strong class="mr-2">GitHub:</strong>
+                                <a href="#" target="_blank">yourusername</a>
+                            </div>
+                        </div>
+
+                        <div class="field is-flex is-align-items-center mb-5">
+                            <span class="icon is-medium mr-4 has-text-primary">
+                                <i class="fab fa-linkedin fa-lg"></i>
+                            </span>
+                            <div class="is-size-5">
+                                <strong class="mr-2">LinkedIn:</strong>
+                                <a href="#" target="_blank">your-linkedin-profile</a>
+                            </div>
+                        </div>
+
+                        <div class="field is-flex is-align-items-center">
+                            <span class="icon is-medium mr-4 has-text-primary">
+                                <i class="fab fa-twitter fa-lg"></i>
+                            </span>
+                            <div class="is-size-5">
+                                <strong class="mr-2">Twitter / X:</strong>
+                                <a href="#" target="_blank">@yourhandle</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="content has-text-centered">
-            <p><strong>Homepage</strong> of <a href="#">Alfas</a>. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+            <p> &copy; 2025 Alfas Esty. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
         </div>
     </footer>
 
