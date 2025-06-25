@@ -11,145 +11,78 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Apply the Inter font and ensure a light background */
-        body {
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #ffffff; /* Explicitly set a white background */
-        }
-        /* Ensure the navbar burger is visible */
-        .navbar-burger span {
-            background-color: #4a4a4a;
-        }
-        /* Make the main content section grow to fill available space */
-        .main-section {
-            flex-grow: 1;
-        }
-        /* Style for the SVG */
-        .network-svg {
-            width: 100%;
-            height: auto;
-            max-width: 500px; /* Max size for the SVG */
-            margin: 0 auto; /* Center the SVG in its column */
-        }
+        body { font-family: 'Inter', sans-serif; display: flex; flex-direction: column; min-height: 100vh; background-color: #ffffff; }
+        .main-section { flex-grow: 1; }
+        .network-svg { width: 100%; height: auto; max-width: 500px; margin: 0 auto; }
     </style>
 </head>
 <body>
 
-    <!-- Placeholder for the navigation bar -->
-    <div id="navbar-placeholder"></div>
+    <!-- Navigation Bar -->
+    <nav class="navbar is-white has-shadow" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="/index.html" class="navbar-item is-active">Home</a>
+                    <a href="/blog.html" class="navbar-item">Blog</a>
+                    <a href="/publications.html" class="navbar-item">Publications</a>
+                    <a href="/contact.html" class="navbar-item">Contact</a>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="is-size-5 has-text-weight-semibold">Alfas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Main Content: SVG and Intro -->
     <section class="section main-section">
         <div class="container">
             <div class="columns is-vcentered is-desktop">
-                <!-- Left Column: SVG Image -->
                 <div class="column is-half has-text-centered">
                     <svg class="network-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Lines -->
-                        <line x1="100" y1="20" x2="50" y2="60" stroke="#dbdbdb" stroke-width="2"/>
-                        <line x1="100" y1="20" x2="150" y2="60" stroke="#dbdbdb" stroke-width="2"/>
-                        <line x1="50" y1="60" x2="30" y2="120" stroke="#dbdbdb" stroke-width="2"/>
-                        <line x1="50" y1="60" x2="100" y2="100" stroke="#dbdbdb" stroke-width="2"/>
-                        <line x1="150" y1="60" x2="100" y2="100" stroke="#dbdbdb" stroke-width="2"/>
-                        <line x1="150" y1="60" x2="170" y2="120" stroke="#dbdbdb" stroke-width="2"/>
-                        <line x1="30" y1="120" x2="100" y2="180" stroke="#dbdbdb" stroke-width="2"/>
-                        <line x1="100" y1="100" x2="100" y2="180" stroke="#dbdbdb" stroke-width="2"/>
-                        <line x1="170" y1="120" x2="100" y2="180" stroke="#dbdbdb" stroke-width="2"/>
-                        <line x1="50" y1="60" x2="150" y2="60" stroke="#dbdbdb" stroke-width="1.5" stroke-dasharray="4"/>
-                        <line x1="30" y1="120" x2="60" y2="160" stroke="#dbdbdb" stroke-width="1.5"/>
-                        <line x1="60" y1="160" x2="100" y2="180" stroke="#dbdbdb" stroke-width="1.5"/>
-                        <line x1="170" y1="120" x2="140" y2="160" stroke="#dbdbdb" stroke-width="1.5"/>
-                        <line x1="140" y1="160" x2="100" y2="180" stroke="#dbdbdb" stroke-width="1.5"/>
-                        <line x1="100" y1="20" x2="25" y2="80" stroke="#dbdbdb" stroke-width="1.5" stroke-dasharray="4"/>
-                        <line x1="100" y1="20" x2="175" y2="80" stroke="#dbdbdb" stroke-width="1.5" stroke-dasharray="4"/>
-                        <line x1="25" y1="80" x2="50" y2="140" stroke="#dbdbdb" stroke-width="1.5"/>
-                        <line x1="175" y1="80" x2="150" y2="140" stroke="#dbdbdb" stroke-width="1.5"/>
-                        <line x1="50" y1="140" x2="100" y2="100" stroke="#dbdbdb" stroke-width="1.5"/>
-                        <line x1="150" y1="140" x2="100" y2="100" stroke="#dbdbdb" stroke-width="1.5"/>
-                        <line x1="100" y1="20" x2="100" y2="60" stroke="#dbdbdb" stroke-width="1.5" stroke-dasharray="4"/>
-                        
-                        <!-- Nodes (Circles) - All with r="8" -->
-                        <circle cx="100" cy="20" r="8" fill="#3273dc"/>
-                        <circle cx="50" cy="60" r="8" fill="#23d160"/>
-                        <circle cx="150" cy="60" r="8" fill="#23d160"/>
-                        <circle cx="100" cy="100" r="8" fill="#ffdd57"/>
-                        <circle cx="30" cy="120" r="8" fill="#ff3860"/>
-                        <circle cx="170" cy="120" r="8" fill="#ff3860"/>
-                        <circle cx="100" cy="180" r="8" fill="#209cee"/>
-                        <circle cx="60" cy="160" r="8" fill="#167df0"/>
-                        <circle cx="140" cy="160" r="8" fill="#167df0"/>
-                        <circle cx="25" cy="80" r="8" fill="#ff9f43"/>
-                        <circle cx="175" cy="80" r="8" fill="#ff9f43"/>
-                        <circle cx="50" cy="140" r="8" fill="#9b59b6"/>
-                        <circle cx="150" cy="140" r="8" fill="#9b59b6"/>
-                        <circle cx="100" cy="60" r="8" fill="#e74c3c"/>
+                        <line x1="100" y1="20" x2="50" y2="60" stroke="#dbdbdb" stroke-width="2"/><line x1="100" y1="20" x2="150" y2="60" stroke="#dbdbdb" stroke-width="2"/><line x1="50" y1="60" x2="30" y2="120" stroke="#dbdbdb" stroke-width="2"/><line x1="50" y1="60" x2="100" y2="100" stroke="#dbdbdb" stroke-width="2"/><line x1="150" y1="60" x2="100" y2="100" stroke="#dbdbdb" stroke-width="2"/><line x1="150" y1="60" x2="170" y2="120" stroke="#dbdbdb" stroke-width="2"/><line x1="30" y1="120" x2="100" y2="180" stroke="#dbdbdb" stroke-width="2"/><line x1="100" y1="100" x2="100" y2="180" stroke="#dbdbdb" stroke-width="2"/><line x1="170" y1="120" x2="100" y2="180" stroke="#dbdbdb" stroke-width="2"/><line x1="50" y1="60" x2="150" y2="60" stroke="#dbdbdb" stroke-width="1.5" stroke-dasharray="4"/><line x1="30" y1="120" x2="60" y2="160" stroke="#dbdbdb" stroke-width="1.5"/><line x1="60" y1="160" x2="100" y2="180" stroke="#dbdbdb" stroke-width="1.5"/><line x1="170" y1="120" x2="140" y2="160" stroke="#dbdbdb" stroke-width="1.5"/><line x1="140" y1="160" x2="100" y2="180" stroke="#dbdbdb" stroke-width="1.5"/><line x1="100" y1="20" x2="25" y2="80" stroke="#dbdbdb" stroke-width="1.5" stroke-dasharray="4"/><line x1="100" y1="20" x2="175" y2="80" stroke="#dbdbdb" stroke-width="1.5" stroke-dasharray="4"/><line x1="25" y1="80" x2="50" y2="140" stroke="#dbdbdb" stroke-width="1.5"/><line x1="175" y1="80" x2="150" y2="140" stroke="#dbdbdb" stroke-width="1.5"/><line x1="50" y1="140" x2="100" y2="100" stroke="#dbdbdb" stroke-width="1.5"/><line x1="150" y1="140" x2="100" y2="100" stroke="#dbdbdb" stroke-width="1.5"/><line x1="100" y1="20" x2="100" y2="60" stroke="#dbdbdb" stroke-width="1.5" stroke-dasharray="4"/>
+                        <circle cx="100" cy="20" r="8" fill="#3273dc"/><circle cx="50" cy="60" r="8" fill="#23d160"/><circle cx="150" cy="60" r="8" fill="#23d160"/><circle cx="100" cy="100" r="8" fill="#ffdd57"/><circle cx="30" cy="120" r="8" fill="#ff3860"/><circle cx="170" cy="120" r="8" fill="#ff3860"/><circle cx="100" cy="180" r="8" fill="#209cee"/><circle cx="60" cy="160" r="8" fill="#167df0"/><circle cx="140" cy="160" r="8" fill="#167df0"/><circle cx="25" cy="80" r="8" fill="#ff9f43"/><circle cx="175" y2="80" r="8" fill="#ff9f43"/><circle cx="50" cy="140" r="8" fill="#9b59b6"/><circle cx="150" cy="140" r="8" fill="#9b59b6"/><circle cx="100" cy="60" r="8" fill="#e74c3c"/>
                     </svg>
                 </div>
-
-                <!-- Right Column: Introduction -->
                 <div class="column is-half">
-                    <h1 class="title is-1">
-                        Hi, I'm Muhammad Alfas Sanguvanthody.
-                    </h1>
-                    <h2 class="subtitle is-3">
-                        Alfas Esty on web. 
-                    </h2>
+                    <h1 class="title is-1">Hi, I'm Muhammad Alfas Sanguvanthody</h1>
+                    <h2 class="subtitle is-3">Doind PhD at IIT Delhi</h2>
                     <div class="content is-medium">
-                        <p>
-                            I am currently doing PhD at IIT Delhi. My broad topic of interest is operations research, with a focus on network models. I have a basic understanding of systems thinking. I am a little concerned about nonlinearity in systems. Hence, I work with simulation and machine learning models like graph neural networks. You can see the work I have done on the <a href="publications.html"> Publications </a> tab. 
-                        </p>
-                        <p>
-                            You can find me on social media under the username alfasst except on X(Twitter), where I am under the username stalfas. Besides academics, I like to observe politics and make theories that I don't share anywhere. I also read fiction and non-fiction which you can see on goodreads. 
-                        </p>
+                        <p>I am currently doing PhD at IIT Delhi. My broad topic of interest is operations research, with a focus on network models. I have a basic understanding of systems thinking. I am a little concerned about nonlinearity in systems. Hence, I work with simulation and machine learning models like graph neural networks. You can see the work I have done on the <a href="publications.html"> Publications </a> tab. </p>
+                        <p>I put my name as Alfas Esty on social media website. You can find me on social media under the username alfasst except on X(Twitter), where I am under the username stalfas. Besides academics, I like to observe politics and make theories that I don't share anywhere. I also read fiction and non-fiction which you can see on Goodreads. </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Placeholder for the footer -->
-    <div id="footer-placeholder"></div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p><strong>Homepage</strong> of <a href="#">Alfas</a>. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+        </div>
+    </footer>
 
-    <!-- Script to load reusable components -->
+    <!-- JavaScript for the mobile navbar toggle -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Function to fetch and insert HTML content
-            const loadComponent = (url, placeholderId) => {
-                return fetch(url)
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById(placeholderId).innerHTML = data;
-                    });
-            };
-
-            // Load Navbar and then set active link and burger functionality
-            loadComponent('_navbar.html', 'navbar-placeholder').then(() => {
-                // Set the active class on the correct nav item
-                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-                const navLinks = document.querySelectorAll('.navbar-item');
-                navLinks.forEach(link => {
-                    if (link.getAttribute('href') === currentPage) {
-                        link.classList.add('is-active');
-                    }
-                });
-
-                // Re-initialize navbar burger functionality after loading content
-                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-                $navbarBurgers.forEach(el => {
-                    el.addEventListener('click', () => {
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
-                    });
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
                 });
             });
-
-            // Load Footer
-            loadComponent('_footer.html', 'footer-placeholder');
         });
     </script>
 </body>

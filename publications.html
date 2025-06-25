@@ -4,134 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications - Alfas Esty</title>
-    <!-- Bulma CSS Framework -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Apply the Inter font and basic layout */
-        body {
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #ffffff;
-        }
-        /* Ensure the navbar burger is visible */
-        .navbar-burger span {
-            background-color: #4a4a4a;
-        }
-        /* Make the main content section grow */
-        .main-section {
-            flex-grow: 1;
-        }
-        .publication-entry {
-            margin-bottom: 1.5rem;
-        }
-        .publication-title {
-            font-weight: bold;
-        }
+        body { font-family: 'Inter', sans-serif; display: flex; flex-direction: column; min-height: 100vh; background-color: #ffffff; }
+        .main-section { flex-grow: 1; }
+        .publication-entry { margin-bottom: 1.5rem; }
+        .publication-title { font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <!-- Placeholder for the navigation bar -->
-    <div id="navbar-placeholder"></div>
+    <!-- Navigation Bar -->
+    <nav class="navbar is-white has-shadow" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="/index.html" class="navbar-item">Home</a>
+                    <a href="/blog.html" class="navbar-item">Blog</a>
+                    <a href="/publications.html" class="navbar-item is-active">Publications</a>
+                    <a href="/contact.html" class="navbar-item">Contact</a>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="is-size-5 has-text-weight-semibold">Muhammad Alfas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Publications Section -->
     <section class="section main-section">
         <div class="container">
             <h1 class="title is-1 has-text-centered">Publications</h1>
             <hr>
-
-            <!-- Year 2025 -->
             <h2 class="title is-2">2025</h2>
-            <div class="box content">
-                <div class="publication-entry">
-                    <p class="publication-title">An Efficient Framework for Epidemiological Parameter Estimation via Graph Reduction and Graph Neural Networks</p>
-                    <p>Muhammad Alfas, Manoj Kumar, Shaurya Shriyam, Sandeep Kumar</p>
-                    <p><i>ACM Transactions on Knowledge Discovery from Data</i>, 2025</p>
-                </div>
-                <hr>
-                <div class="publication-entry">
-                    <p class="publication-title">Grid-World Modeling of Area-Population Dynamics Based on Data for Indian Cities</p>
-                    <p>Dvarkesh Ghatol, Muhammad Alfas, Akshay Mattoo, Shaurya Shriyam</p>
-                    <p><i>Complex Systems</i>, Vol. 34, No. 2, 2025</p>
-                </div>
-                <hr>
-                <div class="publication-entry">
-                    <p class="publication-title">A DES-Based Online Digital Twin Framework for Festo’s Cyber-Physical System: Industry 4.0</p>
-                    <p>Muhammad Alfas, Yanyan Tian, Ahmad Attar, Martino Luis, Voicu Ion Sucala</p>
-                    <p><i>Proceedings of the Operational Research Society Simulation Workshop 2025 (SW25)</i>, 2025</p>
-                </div>
-            </div>
-
-            <!-- Year 2023 -->
+            <div class="box content"><div class="publication-entry"><p class="publication-title">An Efficient Framework for Epidemiological Parameter Estimation via Graph Reduction and Graph Neural Networks</p><p>Muhammad Alfas, Manoj Kumar, Shaurya Shriyam, Sandeep Kumar</p><p><i>ACM Transactions on Knowledge Discovery from Data</i>, 2025</p></div><hr><div class="publication-entry"><p class="publication-title">Grid-World Modeling of Area-Population Dynamics Based on Data for Indian Cities</p><p>Dvarkesh Ghatol, Muhammad Alfas, Akshay Mattoo, Shaurya Shriyam</p><p><i>Complex Systems</i>, Vol. 34, No. 2, 2025</p></div><hr><div class="publication-entry"><p class="publication-title">A DES-Based Online Digital Twin Framework for Festo’s Cyber-Physical System: Industry 4.0</p><p>Muhammad Alfas, Yanyan Tian, Ahmad Attar, Martino Luis, Voicu Ion Sucala</p><p><i>Proceedings of the Operational Research Society Simulation Workshop 2025 (SW25)</i>, 2025</p></div></div>
             <h2 class="title is-2">2023</h2>
-            <div class="box content">
-                <div class="publication-entry">
-                    <p class="publication-title">Heuristic-Based Service Allocation and Price Determination in Cloud Manufacturing Operations for Industrial Parks</p>
-                    <p>Adarsh Mishra, Aastha Jain, Muhammad Alfas, Shaurya Shriyam, Amit Kumar</p>
-                    <p><i>2023 IEEE 19th International Conference on Automation Science and Engineering (CASE)</i>, pp. 1-6, 2023</p>
-                </div>
-                <hr>
-                <div class="publication-entry">
-                    <p class="publication-title">Discrete-event simulation and exploratory analysis of network epidemiological models</p>
-                    <p>Muhammad Alfas, Shaurya Shriyam</p>
-                    <p><i>Network Modeling Analysis in Health Informatics and Bioinformatics</i>, Vol. 12, No. 1, pp. 30, 2023</p>
-                </div>
-            </div>
-            
-            <!-- Year 2022 -->
+            <div class="box content"><div class="publication-entry"><p class="publication-title">Heuristic-Based Service Allocation and Price Determination in Cloud Manufacturing Operations for Industrial Parks</p><p>Adarsh Mishra, Aastha Jain, Muhammad Alfas, Shaurya Shriyam, Amit Kumar</p><p><i>2023 IEEE 19th International Conference on Automation Science and Engineering (CASE)</i>, pp. 1-6, 2023</p></div><hr><div class="publication-entry"><p class="publication-title">Discrete-event simulation and exploratory analysis of network epidemiological models</p><p>Muhammad Alfas, Shaurya Shriyam</p><p><i>Network Modeling Analysis in Health Informatics and Bioinformatics</i>, Vol. 12, No. 1, pp. 30, 2023</p></div></div>
             <h2 class="title is-2">2022</h2>
-            <div class="box content">
-                <div class="publication-entry">
-                    <p class="publication-title">Online Heuristic Approach for Efficient Allocation of Limited COVID-19 Testing Kits</p>
-                    <p>Muhammad Alfas, Shaurya Shriyam</p>
-                    <p><i>Proceedings of the 11th International Conference on Operations Research and Enterprise Systems - ICORES</i>, pp. 329-336, 2022</p>
-                </div>
-            </div>
-
+            <div class="box content"><div class="publication-entry"><p class="publication-title">Online Heuristic Approach for Efficient Allocation of Limited COVID-19 Testing Kits</p><p>Muhammad Alfas, Shaurya Shriyam</p><p><i>Proceedings of the 11th International Conference on Operations Research and Enterprise Systems - ICORES</i>, pp. 329-336, 2022</p></div></div>
         </div>
     </section>
 
-    <!-- Placeholder for the footer -->
-    <div id="footer-placeholder"></div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p><strong>Homepage</strong> of <a href="#">Alfas</a>. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+        </div>
+    </footer>
 
-    <!-- Script to load reusable components -->
+    <!-- JavaScript for the mobile navbar toggle -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const loadComponent = (url, placeholderId) => {
-                return fetch(url)
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById(placeholderId).innerHTML = data;
-                    });
-            };
-
-            loadComponent('_navbar.html', 'navbar-placeholder').then(() => {
-                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-                const navLinks = document.querySelectorAll('.navbar-item');
-                navLinks.forEach(link => {
-                    if (link.getAttribute('href') === currentPage) {
-                        link.classList.add('is-active');
-                    }
-                });
-
-                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-                $navbarBurgers.forEach(el => {
-                    el.addEventListener('click', () => {
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
-                    });
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
                 });
             });
-
-            loadComponent('_footer.html', 'footer-placeholder');
         });
     </script>
 </body>

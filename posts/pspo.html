@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Alfas Esty</title>
+    <title>PSPO Talk - Alfas Esty</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,7 @@
     <style>
         body { font-family: 'Inter', sans-serif; display: flex; flex-direction: column; min-height: 100vh; background-color: #ffffff; }
         .main-section { flex-grow: 1; }
+        .blog-container { max-width: 768px; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -39,22 +40,19 @@
         </div>
     </nav>
 
-    <!-- Blog Section -->
+    <!-- Blog Post Section -->
     <section class="section main-section">
-        <div class="container">
-            <h1 class="title is-1 has-text-centered">Blogposts</h1>
-            <h2 class="subtitle is-4 has-text-centered">Thoughts, tutorials, and updates.</h2>
+        <div class="container blog-container">
+            <h1 class="title is-2">My Recent Talk on Public Systems Planning and Optimization Symposium</h1>
+            <p class="subtitle is-6"><i>Posted on 12 Sept 2022</i></p>
             <hr>
-            <div class="box">
-                <article class="media">
-                    <div class="media-content">
-                        <div class="content">
-                            <p class="title is-4"><a href="posts/pspo.html">My Recent Talk on My Recent Talk on Public Systems Planning and Optimization Symposium</a></p>
-                            <p class="subtitle is-6"><i>Posted on 12 Sept 2022</i></p>
-                            <p>I presented my work on "Online Heuristic Approach for Efficient Allocation of Limited COVID-19 Testing Kits" at the 12th session of Public Systems Planning and Optimization (PSPO) Symposium conducted by Public Systems Lab, IIT Delhi.</p>
-                        </div>
-                    </div>
-                </article>
+            <div class="content is-medium">
+                <p>I presented my work on "Online Heuristic Approach for Efficient Allocation of Limited COVID-19 Testing Kits" at the 12th session of Public Systems Planning and Optimization (PSPO) Symposium conducted by Public Systems Lab, IIT Delhi.</p>
+                <p>The full recording of the session is now available on YouTube. You can watch it right here:</p>
+                <figure class="image is-16by9">
+                    <iframe class="has-ratio" src="https://www.youtube.com/embed/-KFocv1l4ZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </figure>
+                <p>You can read more about the topic at <a href='https://www.scitepress.org/PublicationsDetail.aspx?ID=R9/cXbtNEm0=&t=1'>ScitePress<a>.</p>
             </div>
         </div>
     </section>
@@ -62,7 +60,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="content has-text-centered">
-            <p><strong>Homepage</strong> of <a href="#">Alfas</a>. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+            <p><strong>Personal Homepage</strong> by <a href="#">Your Name</a>. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
         </div>
     </footer>
 

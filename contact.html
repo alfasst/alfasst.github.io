@@ -4,37 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Alfas Esty</title>
-    <!-- Bulma CSS Framework -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Apply the Inter font and basic layout */
-        body {
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #ffffff;
-        }
-        /* Ensure the navbar burger is visible */
-        .navbar-burger span {
-            background-color: #4a4a4a;
-        }
-        /* Make the main content section grow */
-        .main-section {
-            flex-grow: 1;
-        }
+        body { font-family: 'Inter', sans-serif; display: flex; flex-direction: column; min-height: 100vh; background-color: #ffffff; }
+        .main-section { flex-grow: 1; }
     </style>
 </head>
 <body>
 
-    <!-- Placeholder for the navigation bar -->
-    <div id="navbar-placeholder"></div>
+    <!-- Navigation Bar -->
+    <nav class="navbar is-white has-shadow" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="/index.html" class="navbar-item">Home</a>
+                    <a href="/blog.html" class="navbar-item">Blog</a>
+                    <a href="/publications.html" class="navbar-item">Publications</a>
+                    <a href="/contact.html" class="navbar-item is-active">Contact</a>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="is-size-5 has-text-weight-semibold">Your Name</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Contact Section -->
     <section class="section main-section">
@@ -42,116 +46,47 @@
             <h1 class="title is-1 has-text-centered">Get in Touch</h1>
             <h2 class="subtitle is-4 has-text-centered">I'd love to hear from you.</h2>
             <hr>
-
             <div class="columns">
-                <!-- Contact Information -->
                 <div class="column is-half">
                     <h3 class="title is-3">Contact Information</h3>
-                    <p class="subtitle is-5">
-                        The best way to reach me is by email. You can also find me on these platforms:
-                    </p>
-                    <div class="field">
-                        <p class="control has-icons-left">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-envelope"></i>
-                            </span>
-                            <strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a>
-                        </p>
-                    </div>
-                    <div class="field">
-                        <p class="control has-icons-left">
-                            <span class="icon is-small is-left">
-                                <i class="fab fa-github"></i>
-                            </span>
-                            <strong>GitHub:</strong> <a href="#" target="_blank">alfasst</a>
-                        </p>
-                    </div>
-                    <div class="field">
-                        <p class="control has-icons-left">
-                            <span class="icon is-small is-left">
-                                <i class="fab fa-linkedin"></i>
-                            </span>
-                            <strong>LinkedIn:</strong> <a href="#" target="_blank">alfasst</a>
-                        </p>
-                    </div>
-                     <div class="field">
-                        <p class="control has-icons-left">
-                            <span class="icon is-small is-left">
-                                <i class="fab fa-twitter"></i>
-                            </span>
-                            <strong>Twitter / X:</strong> <a href="#" target="_blank">@stalfas</a>
-                        </p>
-                    </div>
+                    <p class="subtitle is-5">The best way to reach me is by email. You can also find me on these platforms:</p>
+                    <div class="field"><p class="control has-icons-left"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p></div>
+                    <div class="field"><p class="control has-icons-left"><span class="icon is-small is-left"><i class="fab fa-github"></i></span><strong>GitHub:</strong> <a href="#" target="_blank">alfasst</a></p></div>
+                    <div class="field"><p class="control has-icons-left"><span class="icon is-small is-left"><i class="fab fa-linkedin"></i></span><strong>LinkedIn:</strong> <a href="#" target="_blank">alfasst</a></p></div>
+                    <div class="field"><p class="control has-icons-left"><span class="icon is-small is-left"><i class="fab fa-twitter"></i></span><strong>Twitter / X:</strong> <a href="#" target="_blank">@alfasst</a></p></div>
                 </div>
-
-                <!-- Contact Form -->
                 <div class="column is-half">
-                     <h3 class="title is-3">Send a Message</h3>
-                     <form action="#" method="POST"> <!-- NOTE: Requires a backend service to function -->
-                        <div class="field">
-                            <label class="label">Name</label>
-                            <div class="control">
-                                <input class="input" type="text" placeholder="Your Name" required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Email</label>
-                            <div class="control">
-                                <input class="input" type="email" placeholder="your.email@example.com" required>
-                            </div>
-                        </div>
-                         <div class="field">
-                            <label class="label">Message</label>
-                            <div class="control">
-                                <textarea class="textarea" placeholder="Your message here..." required></textarea>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                                <button class="button is-primary is-fullwidth">Send Message</button>
-                            </div>
-                        </div>
-                     </form>
+                    <h3 class="title is-3">Send a Message</h3>
+                    <form action="#" method="POST">
+                        <div class="field"><label class="label">Name</label><div class="control"><input class="input" type="text" placeholder="Your Name" required></div></div>
+                        <div class="field"><label class="label">Email</label><div class="control"><input class="input" type="email" placeholder="your.email@example.com" required></div></div>
+                        <div class="field"><label class="label">Message</label><div class="control"><textarea class="textarea" placeholder="Your message here..." required></textarea></div></div>
+                        <div class="field"><div class="control"><button class="button is-primary is-fullwidth">Send Message</button></div></div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Placeholder for the footer -->
-    <div id="footer-placeholder"></div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p><strong>Homepage</strong> of <a href="#">Alfas</a>. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+        </div>
+    </footer>
 
-    <!-- Script to load reusable components -->
+    <!-- JavaScript for the mobile navbar toggle -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const loadComponent = (url, placeholderId) => {
-                return fetch(url)
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById(placeholderId).innerHTML = data;
-                    });
-            };
-
-            loadComponent('_navbar.html', 'navbar-placeholder').then(() => {
-                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-                const navLinks = document.querySelectorAll('.navbar-item');
-                navLinks.forEach(link => {
-                    if (link.getAttribute('href') === currentPage) {
-                        link.classList.add('is-active');
-                    }
-                });
-
-                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-                $navbarBurgers.forEach(el => {
-                    el.addEventListener('click', () => {
-                        const target = el.dataset.target;
-                        const $target = document.getElementById(target);
-                        el.classList.toggle('is-active');
-                        $target.classList.toggle('is-active');
-                    });
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
                 });
             });
-
-            loadComponent('_footer.html', 'footer-placeholder');
         });
     </script>
 </body>
