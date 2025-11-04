@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Alfas Esty</title>
+    <title>PSPO Talk - Alfas Esty</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,8 +97,8 @@
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-start">
                     <a href="/index.html" class="navbar-item">Home</a>
-                    <a href="/blog.html" class="navbar-item is-active">Blog</a>
-                    <a href="/projects.html" class="navbar-item">Projects</a>
+                    <a href="/blog.html" class="navbar-item">Blog</a>
+                    <a href="/projects.html" class="navbar-item is-active">Projects</a>
                     <a href="/publications.html" class="navbar-item">Publications</a>
                     <a href="/contact.html" class="navbar-item">Contact</a>
                 </div>
@@ -111,22 +111,16 @@
         </div>
     </nav>
 
-    <!-- Blog Section -->
+    <!-- Blog Post Section -->
     <section class="section main-section">
-        <div class="container">
-            <h1 class="title is-1 has-text-centered">Blogposts</h1>
-            <h2 class="subtitle is-4 has-text-centered">Thoughts, tutorials, and updates.</h2>
+        <div class="container blog-container">
+            <h1 class="title is-2">Graft: Graph-based Framework for Network Diffusion Parameter Estimation</h1>
             <hr>
-            <div class="box">
-                <article class="media">
-                    <div class="media-content">
-                        <div class="content">
-                            <p class="title is-4"><a href="posts/pspo.html">Public Systems Planning and Optimization Symposium #12</a></p>
-                            <p class="subtitle is-6"><i>Posted on 12 Sept 2022</i></p>
-                            <p>I presented my work on "Online Heuristic Approach for Efficient Allocation of Limited COVID-19 Testing Kits" at the 12th session of Public Systems Planning and Optimization (PSPO) Symposium conducted by Public Systems Lab, IIT Delhi.</p>
-                        </div>
-                    </div>
-                </article>
+            <div class="content is-medium">
+                <p>Graft is a framework for parameter estimation for network diffusion processes like epidemics, and opinion dynamics. This framework was originally developed as GREPE (Graph Reduction-Enabled Epidemiological Parameter Estimation) for epidemic parameter estimation. The framework consist of a simulator, a graph reduction module, and a graph neural network (GNN) based learner. Currently, the framework provides good results for epidemic parameter classification and inference and reasonable results for Hegselmann–Krause (HK) opinion dynamics model.</p>
+                <figure class="image is-16by9">
+                    <iframe class="has-ratio" src="https://www.youtube.com/embed/-KFocv1l4ZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </figure>
             </div>
         </div>
     </section>

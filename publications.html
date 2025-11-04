@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publications - Alfas Esty</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
     <style>
-        /* Define the new color palette */
         :root {
-            --bg-color: #FFFFFF;
+            --bg-color: #ffffff;
             --text-color: #2c3e50;
             --primary-color: #3498db;
             --neutral-color: #ecf0f1;
             --footer-bg-color: #fafafa;
         }
-
-        /* Apply the new colors */
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
@@ -27,77 +24,53 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
-        .title, .subtitle {
-            color: var(--text-color);
-        }
-
-        a {
-            color: var(--primary-color);
-            font-weight: 500;
-        }
-        a:hover, .navbar-item.is-active {
-            color: var(--text-color);
-        }
-
-        /* Style key components */
+        .title,
+        .subtitle { color: var(--text-color); }
+        a { color: var(--primary-color); font-weight: 500; }
+        a:hover,
+        .navbar-item.is-active { color: var(--text-color); }
         .box {
             background-color: var(--bg-color);
             border: 1px solid var(--neutral-color);
             box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.05), 0 0px 0 1px rgba(10, 10, 10, 0.02);
             border-radius: 8px;
         }
-
-        .navbar {
-            border-bottom: 1px solid var(--neutral-color);
-        }
-        
-        .footer {
-            background-color: var(--footer-bg-color);
-            border-top: 1px solid var(--neutral-color);
-        }
-
-        .button.is-primary {
-            background-color: var(--primary-color);
-            border-color: transparent;
-        }
-        .button.is-primary:hover {
-            background-color: var(--text-color);
-        }
-
-        /* Page-specific styles */
+        .navbar { border-bottom: 1px solid var(--neutral-color); }
+        .footer { background-color: var(--footer-bg-color); border-top: 1px solid var(--neutral-color); }
+        .button.is-primary { background-color: var(--primary-color); border-color: transparent; }
+        .button.is-primary:hover { background-color: var(--text-color); }
         .main-section { flex-grow: 1; }
-        .network-svg { width: 100%; height: auto; max-width: 500px; margin: 0 auto; }
         .publication-entry { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--neutral-color); }
         .publication-entry:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-        .publication-title { font-weight: bold; }
+        .publication-title { font-weight: 700; }
         .blog-container { max-width: 768px; margin: 0 auto; }
         hr { background-color: var(--neutral-color); height: 1px; margin: 1.5rem 0; }
-        
-        /* Publication page readability improvement */
-        .publication-entry p {
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        .publication-entry i {
-            color: #5a6e81; /* Softer, but still high-contrast grey */
-        }
-</style>
+        .publication-entry p { color: var(--text-color); line-height: 1.6; }
+        .publication-entry i { color: #5a6e81; }
+        .pub-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin-top: 0.5rem; }
+        .pub-meta a.is-doi { font-size: 0.95rem; }
+        .tag.is-light { border: 1px solid #e5e7eb; }
+        /* Optional subtle icon before DOI */
+        .doi-prefix::before { content: 'doi:'; text-transform: uppercase; font-size: 0.75rem; margin-right: 0.25rem; color: #6b7280; letter-spacing: 0.02em; }
+    </style>
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav class="navbar is-white has-shadow" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-                    <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </a>
             </div>
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-start">
                     <a href="/index.html" class="navbar-item">Home</a>
                     <a href="/blog.html" class="navbar-item">Blog</a>
+                    <a href="/projects.html" class="navbar-item">Projects</a>
                     <a href="/publications.html" class="navbar-item is-active">Publications</a>
                     <a href="/contact.html" class="navbar-item">Contact</a>
                 </div>
@@ -114,20 +87,117 @@
     <section class="section main-section">
         <div class="container">
             <h1 class="title is-1 has-text-centered">Publications</h1>
-            <hr>
+            <hr />
+
+            <!-- 2025 -->
             <h2 class="title is-2">2025</h2>
-            <div class="box content"><div class="publication-entry"><p class="publication-title">An Efficient Framework for Epidemiological Parameter Estimation via Graph Reduction and Graph Neural Networks</p><p>Muhammad Alfas, Manoj Kumar, Shaurya Shriyam, Sandeep Kumar</p><p><i>ACM Transactions on Knowledge Discovery from Data</i>, 2025</p></div><hr><div class="publication-entry"><p class="publication-title">Grid-World Modeling of Area-Population Dynamics Based on Data for Indian Cities</p><p>Dvarkesh Ghatol, Muhammad Alfas, Akshay Mattoo, Shaurya Shriyam</p><p><i>Complex Systems</i>, Vol. 34, No. 2, 2025</p></div><hr><div class="publication-entry"><p class="publication-title">A DES-Based Online Digital Twin Framework for Festo’s Cyber-Physical System: Industry 4.0</p><p>Muhammad Alfas, Yanyan Tian, Ahmad Attar, Martino Luis, Voicu Ion Sucala</p><p><i>Proceedings of the Operational Research Society Simulation Workshop 2025 (SW25)</i>, 2025</p></div></div>
+            <div class="box content">
+                <div class="publication-entry">
+                    <p class="publication-title">Network-based Pedestrian Dynamics Model for Facility Layout Planning in Airport Check-in Systems</p>
+                    <p>Muhammad Alfas, Sreehari G Varma, Mohit Masiwal, Akshit Kumar Chennuri, Varun Ramamohan, Navya Vepakomma</p>
+                    <p><i>TechRxiv</i>, 2025</p>
+                    <div class="pub-meta">
+                      <span class="tag is-warning is-light" title="Preprint">Preprint</span>
+                      <a class="is-doi doi-prefix" href="https://doi.org/10.36227/techrxiv.176072091.18664072/v1" target="_blank" rel="noopener">10.36227/techrxiv.176072091.18664072/v1</a>
+                    </div>
+                </div>
+                <hr />
+                <div class="publication-entry">
+                    <p class="publication-title">An Efficient Framework for Epidemiological Parameter Estimation via Graph Reduction and Graph Neural Networks</p>
+                    <p>Muhammad Alfas, Manoj Kumar, Shaurya Shriyam, Sandeep Kumar</p>
+                    <p><i>ACM Transactions on Knowledge Discovery from Data</i>, 2025</p>
+                    <div class="pub-meta">
+                        <span class="tag is-success is-light" title="Journal article">Journal</span>
+                        <a class="is-doi doi-prefix" href="https://doi.org/10.1145/3736727" target="_blank" rel="noopener">10.1145/3736727</a>
+                    </div>
+                </div>
+                <hr />
+                <div class="publication-entry">
+                    <p class="publication-title">Grid-World Modeling of Area-Population Dynamics Based on Data for Indian Cities</p>
+                    <p>Dvarkesh Ghatol, Muhammad Alfas, Akshay Mattoo, Shaurya Shriyam</p>
+                    <p><i>Complex Systems</i>, Vol. 34, No. 2, 2025</p>
+                    <div class="pub-meta">
+                        <span class="tag is-success is-light" title="Journal article">Journal</span>
+                        <a class="is-doi doi-prefix" href="https://doi.org/10.25088/ComplexSystems.34.2.161" target="_blank" rel="noopener">10.25088/ComplexSystems.34.2.161</a>
+                    </div>
+                </div>
+                <hr />
+                <div class="publication-entry">
+                    <p class="publication-title">Passenger Simulation Models for Transit Scheduling and Facility
+Layout Planning in Airports</p>
+                    <p>Muhammad Alfas, Apurv Negi, Mohit Masiwal, Vishal Kumar Koriya, Tirtharaj Purushottam Babre,
+Navya Vepakomma, Shaurya Shriyam</p>
+                    <p><i>2025 IEEE 21st International Conference on Automation Science and Engineering (CASE)</i>, 2025</p>
+                    <div class="pub-meta">
+                        <span class="tag is-link is-light" title="Conference proceeding">Conference</span>
+                        <a class="is-doi doi-prefix" href="https://doi.org/10.1109/CASE58245.2025.11163855" target="_blank" rel="noopener">10.1109/CASE58245.2025.11163855</a>
+                    </div>
+                </div>
+                <hr />
+                <div class="publication-entry">
+                    <p class="publication-title">A DES-Based Online Digital Twin Framework for Festo’s Cyber-Physical System: Industry 4.0</p>
+                    <p>Muhammad Alfas, Yanyan Tian, Ahmad Attar, Martino Luis, Voicu Ion Sucala</p>
+                    <p><i>Proceedings of the Operational Research Society Simulation Workshop 2025 (SW25)</i>, 2025</p>
+                    <div class="pub-meta">
+                        <span class="tag is-link is-light" title="Conference proceeding">Conference</span>
+                        <a class="is-doi doi-prefix" href="https://doi.org/10.36819/SW25.029" target="_blank" rel="noopener">10.36819/SW25.029</a>
+                    </div>
+                </div>
+                <div class="publication-entry">
+                  <p class="publication-title">Optimal Allocation of Resources for Epidemic Control using Stochastic Block Models and Multi-Armed Bandits</p>
+                  <p>Muhammad Alfas, Shaurya Shriyam</p>
+                  <p><i>Proceedings of the International Conference on Industrial Engineering and Operations Management</i>, 2025</p>
+                  <div class="pub-meta">
+                    <span class="tag is-info is-light" title="Conference abstract">Conference Abstract</span>
+                    <a class="is-doi doi-prefix" href="https://doi.org/10.46254/AN15.20250231" target="_blank" rel="noopener">10.46254/AN15.20250231</a>
+                  </div>
+                </div>
+              </div>
+
+            <!-- 2023 -->
             <h2 class="title is-2">2023</h2>
-            <div class="box content"><div class="publication-entry"><p class="publication-title">Heuristic-Based Service Allocation and Price Determination in Cloud Manufacturing Operations for Industrial Parks</p><p>Adarsh Mishra, Aastha Jain, Muhammad Alfas, Shaurya Shriyam, Amit Kumar</p><p><i>2023 IEEE 19th International Conference on Automation Science and Engineering (CASE)</i>, pp. 1-6, 2023</p></div><hr><div class="publication-entry"><p class="publication-title">Discrete-event simulation and exploratory analysis of network epidemiological models</p><p>Muhammad Alfas, Shaurya Shriyam</p><p><i>Network Modeling Analysis in Health Informatics and Bioinformatics</i>, Vol. 12, No. 1, pp. 30, 2023</p></div></div>
+            <div class="box content">
+                <div class="publication-entry">
+                    <p class="publication-title">Heuristic-Based Service Allocation and Price Determination in Cloud Manufacturing Operations for Industrial Parks</p>
+                    <p>Adarsh Mishra, Aastha Jain, Muhammad Alfas, Shaurya Shriyam, Amit Kumar</p>
+                    <p><i>2023 IEEE 19th International Conference on Automation Science and Engineering (CASE)</i>, pp. 1-6, 2023</p>
+                    <div class="pub-meta">
+                        <span class="tag is-link is-light" title="Conference proceeding">Conference</span>
+                        <a class="is-doi doi-prefix" href="https://doi.org/10.1109/CASE56687.2023.10260508" target="_blank" rel="noopener">10.1109/CASE56687.2023.10260508</a>
+                    </div>
+                </div>
+                <hr />
+                <div class="publication-entry">
+                    <p class="publication-title">Discrete-event simulation and exploratory analysis of network epidemiological models</p>
+                    <p>Muhammad Alfas, Shaurya Shriyam</p>
+                    <p><i>Network Modeling Analysis in Health Informatics and Bioinformatics</i>, Vol. 12, No. 1, pp. 30, 2023</p>
+                    <div class="pub-meta">
+                        <span class="tag is-success is-light" title="Journal article">Journal</span>
+                        <a class="is-doi doi-prefix" href="https://doi.org/10.1007/s13721-023-00425-2" target="_blank" rel="noopener">10.1007/s13721-023-00425-2</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2022 -->
             <h2 class="title is-2">2022</h2>
-            <div class="box content"><div class="publication-entry"><p class="publication-title">Online Heuristic Approach for Efficient Allocation of Limited COVID-19 Testing Kits</p><p>Muhammad Alfas, Shaurya Shriyam</p><p><i>Proceedings of the 11th International Conference on Operations Research and Enterprise Systems - ICORES</i>, pp. 329-336, 2022</p></div></div>
+            <div class="box content">
+                <div class="publication-entry">
+                    <p class="publication-title">Online Heuristic Approach for Efficient Allocation of Limited COVID-19 Testing Kits</p>
+                    <p>Muhammad Alfas, Shaurya Shriyam</p>
+                    <p><i>Proceedings of the 11th International Conference on Operations Research and Enterprise Systems - ICORES</i>, pp. 329-336, 2022</p>
+                    <div class="pub-meta">
+                        <span class="tag is-link is-light" title="Conference proceeding">Conference</span>
+                        <a class="is-doi doi-prefix" href="https://doi.org/10.5220/0010818600003117" target="_blank" rel="noopener">10.5220/0010818600003117</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="content has-text-centered">
-            <p> &copy; 2025 Alfas Esty. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+            <p>&copy; 2025 Alfas Esty. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
         </div>
     </footer>
 
@@ -135,7 +205,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-            $navbarBurgers.forEach(el => {
+            $navbarBurgers.forEach((el) => {
                 el.addEventListener('click', () => {
                     const target = el.dataset.target;
                     const $target = document.getElementById(target);
