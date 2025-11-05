@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1226 236"
+   role="img"
+   aria-labelledby="t d"
+   version="1.1"
+   id="svg133"
+   sodipodi:docname="gnts.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   width="1226"
+   height="236"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview135"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.2382812"
+     inkscape:cx="289.5142"
+     inkscape:cy="74.700315"
+     inkscape:window-width="1904"
+     inkscape:window-height="985"
+     inkscape:window-x="8"
+     inkscape:window-y="50"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g51"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <title
+     id="t">GNTS Resource Allocation Loop — Minimal</title>
+  <desc
+     id="d">Horizontal flow with minimal text, icons for sampler and allocation, 90° arrows, and a right-angle feedback loop.</desc>
+  <defs
+     id="defs15">
+    <!-- Arrowheads -->
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="8"
+       markerHeight="8"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#1f2937"
+         id="path4" />
+    </marker>
+    <!-- Styles -->
+    <style
+       id="style7">
+      :root { --ink:#1f2937; --muted:#64748b; --stroke:#e5e7eb; --bg1:#ffffff; --bg2:#f8fafc; }
+      text { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif; fill:var(--ink); }
+      .title { font-weight:700; font-size:14px; letter-spacing:.2px; }
+      .card { fill: url(#bg); stroke: var(--stroke); stroke-width:1; rx:12; }
+      .arrow { stroke: var(--ink); stroke-width:2.5; fill:none; marker-end:url(#arrow);}
+      .grid { stroke:#cbd5e1; stroke-width:1.5; fill:none; }
+    </style>
+    <!-- Soft card bg -->
+    <linearGradient
+       id="bg"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1">
+      <stop
+         offset="0"
+         stop-color="#ffffff"
+         id="stop9" />
+      <stop
+         offset="1"
+         stop-color="#f3f4f6"
+         id="stop11" />
+    </linearGradient>
+    <filter
+       id="shadow"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feDropShadow
+         dx="0"
+         dy="2"
+         stdDeviation="6"
+         flood-color="#000"
+         flood-opacity="0.18" />
+    </filter>
+  </defs>
+  <!-- CARDS ROW -->
+  <!-- 1. Network -->
+  <g
+     transform="translate(0,46)"
+     id="g35">
+    <rect
+       class="card"
+       filter="url(#shadow)"
+       x="0"
+       y="0"
+       width="220"
+       height="180"
+       id="rect17" />
+    <text
+       class="title"
+       x="76"
+       y="30"
+       id="text19">Network</text>
+    <!-- tiny graph icon -->
+    <g
+       transform="translate(16,54)"
+       id="g33">
+      <circle
+         cx="22"
+         cy="36"
+         r="7"
+         fill="#3b82f6"
+         id="circle21" />
+      <circle
+         cx="74"
+         cy="18"
+         r="7"
+         fill="#06b6d4"
+         id="circle23" />
+      <circle
+         cx="54"
+         cy="62"
+         r="7"
+         fill="#10b981"
+         id="circle25" />
+      <circle
+         cx="120"
+         cy="50"
+         r="7"
+         fill="#3b82f6"
+         id="circle27" />
+      <circle
+         cx="158"
+         cy="24"
+         r="7"
+         fill="#06b6d4"
+         id="circle29" />
+      <path
+         d="m 22,36 52,-18 84,6 M 22,36 54,62 120,50 158,24"
+         stroke="#cbd5e1"
+         stroke-width="2"
+         fill="none"
+         id="path31" />
+    </g>
+  </g>
+  <!-- 2. GNTS -->
+  <g
+     transform="translate(246,36)"
+     id="g51">
+    <rect
+       class="card"
+       filter="url(#shadow)"
+       x="0"
+       y="0"
+       width="250"
+       height="200"
+       id="rect37" />
+    <text
+       class="title"
+       x="96"
+       y="30"
+       id="text39">GNTS</text>
+    <!-- posterior doodles -->
+    <g
+       id="g2692"
+       transform="matrix(1.3975258,0,0,2.2698058,0.720582,-98.829885)">
+      <g
+         id="g2683">
+        <g
+           transform="translate(16,62)"
+           id="g49">
+          <g
+             id="g2520">
+            <g
+               id="g2675">
+              <path
+                 d="M 24,36 C 48,10 80,10 104,36"
+                 stroke="#3b82f6"
+                 fill="none"
+                 stroke-width="2"
+                 id="path41" />
+            </g>
+          </g>
+          <path
+             d="M 24,36 C 48,20 80,20 104,36"
+             stroke="#06b6d4"
+             fill="none"
+             stroke-width="2"
+             id="path43" />
+          <path
+             d="m 24,36 c 24,-10 56,12 80,0"
+             stroke="#10b981"
+             fill="none"
+             stroke-width="2"
+             id="path45" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <!-- 3. Sampler -->
+  <g
+     transform="translate(526,46)"
+     id="g71">
+    <rect
+       class="card"
+       filter="url(#shadow)"
+       x="0"
+       y="0"
+       width="200"
+       height="180"
+       id="rect53" />
+    <text
+       class="title"
+       x="60"
+       y="30"
+       id="text55">Sampler</text>
+    <!-- ICON: dice + funnel -->
+    <!-- dice -->
+    <g
+       transform="translate(24,56)"
+       id="g65">
+      <rect
+         x="0"
+         y="0"
+         width="54"
+         height="54"
+         rx="10"
+         fill="#eef2ff"
+         stroke="#c7d2fe"
+         id="rect57" />
+      <circle
+         cx="17"
+         cy="17"
+         r="4"
+         fill="#6366f1"
+         id="circle59" />
+      <circle
+         cx="27"
+         cy="27"
+         r="4"
+         fill="#6366f1"
+         id="circle61" />
+      <circle
+         cx="37"
+         cy="37"
+         r="4"
+         fill="#6366f1"
+         id="circle63" />
+    </g>
+    <!-- funnel -->
+    <g
+       transform="translate(96,56)"
+       id="g69">
+      <path
+         d="M 0,0 H 80 L 50,34 V 64 L 30,72 V 34 Z"
+         fill="#ecfeff"
+         stroke="#67e8f9"
+         stroke-width="2"
+         id="path67" />
+    </g>
+  </g>
+  <!-- 4. Allocation -->
+  <g
+     transform="translate(756,46)"
+     id="g99">
+    <rect
+       class="card"
+       filter="url(#shadow)"
+       x="0"
+       y="0"
+       width="220"
+       height="180"
+       id="rect73" />
+    <text
+       class="title"
+       x="84"
+       y="30"
+       id="text75">Allocate</text>
+    <!-- ICON: targets + down arrow -->
+    <g
+       transform="translate(22,58)"
+       id="g97">
+      <!-- three targets -->
+      <g
+         id="g81">
+        <circle
+           cx="26"
+           cy="26"
+           r="18"
+           fill="#ecfdf5"
+           stroke="#bbf7d0"
+           id="circle77" />
+        <circle
+           cx="26"
+           cy="26"
+           r="6"
+           fill="#10b981"
+           id="circle79" />
+      </g>
+      <g
+         transform="translate(62)"
+         id="g87">
+        <circle
+           cx="26"
+           cy="26"
+           r="18"
+           fill="#ecfdf5"
+           stroke="#bbf7d0"
+           id="circle83" />
+        <circle
+           cx="26"
+           cy="26"
+           r="6"
+           fill="#10b981"
+           id="circle85" />
+      </g>
+      <g
+         transform="translate(124)"
+         id="g93">
+        <circle
+           cx="26"
+           cy="26"
+           r="18"
+           fill="#ecfdf5"
+           stroke="#bbf7d0"
+           id="circle89" />
+        <circle
+           cx="26"
+           cy="26"
+           r="6"
+           fill="#10b981"
+           id="circle91" />
+      </g>
+      <!-- downward arrow indicating allocation -->
+      <path
+         d="m 86,70 v 36 M 72,92 h 28 M 86,106 76,96 m 10,10 10,-10"
+         stroke="#1f2937"
+         stroke-width="2.5"
+         fill="none"
+         id="path95" />
+    </g>
+  </g>
+  <!-- 5. Feedback -->
+  <g
+     transform="translate(1006,46)"
+     id="g119">
+    <rect
+       class="card"
+       filter="url(#shadow)"
+       x="0"
+       y="0"
+       width="220"
+       height="180"
+       id="rect101" />
+    <text
+       class="title"
+       x="68"
+       y="30"
+       id="text103">Feedback</text>
+    <!-- ICON: clipboard/check -->
+    <g
+       transform="translate(24,56)"
+       id="g111">
+      <rect
+         x="0"
+         y="0"
+         width="60"
+         height="78"
+         rx="8"
+         fill="#f1f5f9"
+         stroke="#e2e8f0"
+         id="rect105" />
+      <rect
+         x="10"
+         y="-8"
+         width="40"
+         height="16"
+         rx="6"
+         fill="#e2e8f0"
+         id="rect107" />
+      <path
+         d="M 14,30 28,44 48,22"
+         stroke="#10b981"
+         stroke-width="4"
+         fill="none"
+         id="path109" />
+    </g>
+    <!-- ICON: trend -->
+    <g
+       transform="translate(100,60)"
+       id="g117">
+      <rect
+         x="0"
+         y="0"
+         width="90"
+         height="60"
+         rx="6"
+         fill="#f8fafc"
+         stroke="#e5e7eb"
+         id="rect113" />
+      <path
+         d="M 8,44 32,32 54,38 78,18"
+         stroke="#3b82f6"
+         stroke-width="2.5"
+         fill="none"
+         id="path115" />
+    </g>
+  </g>
+  <!-- FLOW ARROWS (90° / straight segments) -->
+  <!-- Network -> GNTS -->
+  <path
+     class="arrow"
+     d="m 220,136 h 26"
+     id="path121" />
+  <!-- GNTS -> Sampler -->
+  <path
+     class="arrow"
+     d="m 496,136 h 30"
+     id="path123" />
+  <!-- Sampler -> Allocate -->
+  <path
+     class="arrow"
+     d="m 726,136 h 30"
+     id="path125" />
+  <!-- Allocate -> Feedback -->
+  <path
+     class="arrow"
+     d="m 976,136 h 30"
+     id="path127" />
+  <!-- FEEDBACK LOOP (right-angle path back to GNTS) -->
+  <!-- From Feedback card top-middle up, left across, down to GNTS top edge -->
+  <path
+     class="arrow"
+     d="M 1116,46 V 0 H 371 v 36"
+     id="path129" />
+  <!-- Optional tiny legend (very minimal) -->
+  <text
+     x="0"
+     y="296"
+     font-size="12px"
+     fill="#64748b"
+     id="text131" />
+  <metadata
+     id="metadata952">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>GNTS Resource Allocation Loop — Minimal</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

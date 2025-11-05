@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSPO Talk - Alfas Esty</title>
+    <title>GNTS - Alfas Esty</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,14 +114,29 @@
     <!-- Blog Post Section -->
     <section class="section main-section">
         <div class="container blog-container">
-            <h1 class="title is-2">Graph Neural Bandits</h1>
+            <h1 class="title is-2">GNTS: Graph Neural Thompson Sampling</h1>
             <hr>
             <div class="content is-medium">
-                <p>Graph Neural Thompson Sampling (GNTS) models are explored to do resource allocation in network diffusion processes like epidemics and opinion dynamics. Currently, I have experimented with testing kit allocation for epidemic control. </p>
-                <figure class="image is-16by9">
-                    <iframe class="has-ratio" src="https://www.youtube.com/embed/-KFocv1l4ZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </figure>
+                <figure class="image">
+                  <img src="assets/gnts.svg" alt="System Diagram" class="has-ratio"/>
+                </figure><br/>
+                <p>In this proejct, Thompson Sampling, a multi-armed bandit solution strategy is extended into the realm of contextual bandits using graph neural networks. The GNN models learn to predict the parameters of a probability distribution. Then a sampler is used to sample using these probability distribution. The objective is to do resource allocation in network diffusion processes like epidemics and opinion dynamics. Currently, testing kit allocation experiments for epidemic control are done. Further experiments and extensions are planned for vaccination allocation and <a href="https://snap-stanford.github.io/cs224w-notes/network-methods/influence-maximization">influence maximization</a>. </p>  
             </div>
+            
+            <h3 class="title is-3">Testing Kit Allocation</h3>
+            <hr>
+            <div class="content is-medium">
+                <p>Testing kit allocation is done across groups of population and usually linear and non-linear optimization models. In this work, I have approached this problem using stochastic block models (SBM) and GNTS. The epidemic is simulated on a SBM network and allocation is done using GNTS. Related code is provided below. The publication is on the way.</p>
+              <div class="box">
+                  <h3 class="title is-5">EpiGNTS Code</h3>
+                  <p>  Graph Neural Thompson Sampling for testing kit allocation.</p>
+                  <a class="button is-link" href="https://github.com/alfasst/EpiGNTS" target="_blank">
+                    <i class="fab fa-github"></i>&nbsp; View on GitHub
+                  </a>
+              </div>
+            </div>
+            
+            
         </div>
     </section>
 
