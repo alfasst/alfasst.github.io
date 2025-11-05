@@ -117,10 +117,59 @@
             <h1 class="title is-2">Graft: Graph-based Framework for Network Diffusion Parameter Estimation</h1>
             <hr>
             <div class="content is-medium">
-                <p>Graft is a framework for parameter estimation for network diffusion processes like epidemics, and opinion dynamics. This framework was originally developed as GREPE (Graph Reduction-Enabled Epidemiological Parameter Estimation) for epidemic parameter estimation. The framework consist of a simulator, a graph reduction module, and a graph neural network (GNN) based learner. Currently, the framework provides good results for epidemic parameter classification and inference and reasonable results for Hegselmann–Krause (HK) opinion dynamics model.</p>
-                <figure class="image is-16by9">
-                    <iframe class="has-ratio" src="https://www.youtube.com/embed/-KFocv1l4ZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </figure>
+                <figure class="image">
+                  <img src="assets/graft.svg" alt="System Diagram" class="has-ratio"/>
+                </figure><br/>
+                <p>Graft is an attempt to develop a generalized framework for parameter estimation for network diffusion processes like epidemics and opinion dynamics. This framework was originally developed as GREPE for epidemic parameter estimation. The framework consist of a simulator, a graph reduction module, and a graph neural network (GNN) based learner. Currently, the framework provides good results for epidemic parameter classification and inference and reasonable results for Hegselmann–Krause (HK) opinion dynamics model. The future works include expanding the framework to more opinion dynamics model, developing a robust graph reduction module and architecturing a better GNN model.</p>
+            </div>
+            
+            <h3 class="title is-3">GREPE: Graph Reduction-Enabled Epidemiological Parameter Estimation</h3>
+            <hr>
+            <div class="content is-medium">
+                <p>GREPE is an epidemiological parameter estimation framework based on contact networks and graph neural networks. Contact network-based epidemiological models allow us to capture heterogeneity and individual-level details more effectively compared to compartmental or meta-population models. GREPE framework estimates epidemiological parameters based on the availability of contact network data and individual-level disease time series data. We use supervised as well as self-supervised GNN architectures to incorporate the contact network information into the model. We also employed graph reduction methods such as sampling and coarsening to study scaling behavior and computational efficiency. We formulated the parameter estimation in two ways to study the predictive behavior better: classification and inference problems. Related publication and code are given below.</p>
+                <div class="box">
+                  <h3 class="title is-5">
+                    <a href="https://doi.org/10.1145/3736727" target="_blank">
+                      An Efficient Framework for Epidemiological Parameter Estimation via Graph Reduction and Graph Neural Networks
+                    </a>
+                  </h3>
+                  <p class="is-size-6 has-text-grey">
+                    Muhammad Alfas, Manoj Kumar, Shaurya Shriyam, Sandeep Kumar <br>
+                    <i>ACM Transactions on Knowledge Discovery from Data</i>, 2025
+                  </p>
+
+                  <div class="tags mt-3">
+                    <span class="tag is-success is-light">Journal Article</span>
+                    <a class="tag is-link is-light" href="https://doi.org/10.1145/3736727" target="_blank">
+                      DOI: 10.1145/3736727
+                    </a>
+                  </div>
+              </div>
+              <div class="box">
+                  <h3 class="title is-5">GREPE Code</h3>
+                  <p>Epidemic Parameter Estimation using GNNs.</p>
+                  <a class="button is-link" href="https://github.com/alfasst/GREPE" target="_blank">
+                    <i class="fab fa-github"></i>&nbsp; View on GitHub
+                  </a>
+                </div>
+
+
+            </div>
+            
+            <h3 class="title is-3">Opinion Dynamics Parameter Estimation</h3>
+            <hr>
+            <div class="content is-medium">
+                <p>We have extended the GREPE inference model for Hegselmann–Krause (HK) opinion dynamics model. HK is a bounded confidence model, which work under the assumption that individuals will ignore ideas that are too far from their own. The maximum
+allowed opinion difference is called the "bounded confidence," and it is represented using ε. In this work, the only objective is to estimate ε. We use forest file sampler as the graph reduction model and GraphSAGE as the GNN model. Related code is provided below. The publication is on the way.</p>
+              <div class="box">
+                  <h3 class="title is-5">Grodpe Code</h3>
+                  <p> Graph reduction enabled opinion dynamics parameter estimation .</p>
+                  <a class="button is-link" href="https://github.com/alfasst/Grodpe" target="_blank">
+                    <i class="fab fa-github"></i>&nbsp; View on GitHub
+                  </a>
+                </div>
+
+
             </div>
         </div>
     </section>

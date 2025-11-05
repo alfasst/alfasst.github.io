@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+GRAFT: Graph Reduction + GNN framework (horizontal pipeline)
+Fully self-contained SVG. Resize the width/height as needed.
+-->
+
+<svg
+   width="1200"
+   height="161"
+   viewBox="0 0 1200 161"
+   role="img"
+   aria-labelledby="title desc"
+   version="1.1"
+   id="svg190"
+   sodipodi:docname="graft.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview192"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.0729879"
+     inkscape:cx="622.09462"
+     inkscape:cy="80.616007"
+     inkscape:window-width="1904"
+     inkscape:window-height="985"
+     inkscape:window-x="8"
+     inkscape:window-y="50"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg190"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <title
+     id="title">GRAFT Framework: Network Diffusion ➜ Graph Reduction ➜ GNN Training ➜ Parameter Prediction</title>
+  <desc
+     id="desc">Inputs (network and input parameters) feed a network diffusion simulator to produce time-series data. The network and data go into a graph reduction module. The reduced graph and data train a GNN-based model to predict the input parameters.</desc>
+  <!-- Definitions -->
+  <path
+     class="arrow"
+     d="m 918,88.5 c 40,0 60,0 90,0"
+     id="path137" />
+  <defs
+     id="defs10">
+    <!-- Arrowhead marker -->
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="9"
+       refY="5"
+       markerWidth="10"
+       markerHeight="10"
+       orient="auto-start-reverse">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#475569"
+         id="path4" />
+    </marker>
+    <!-- Card style -->
+    <filter
+       id="softShadow"
+       x="-0.003125"
+       y="-0.003125"
+       width="1.00625"
+       height="1.00625">
+      <feDropShadow
+         dx="0"
+         dy="2"
+         stdDeviation="2"
+         flood-color="#0f172a"
+         flood-opacity="0.2" />
+    </filter>
+    <style
+       id="style8">
+      .caption { font: 600 16px/1.2 Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; fill: #0f172a; }
+      .subtle { font: 500 13px/1.2 Inter, system-ui, sans-serif; fill: #475569; }
+      .small { font: 12px Inter, system-ui, sans-serif; fill: #475569; }
+      .card { rx: 14; ry: 14; stroke: #cbd5e1; stroke-width: 1; filter: url(#softShadow); }
+      .arrow { stroke: #475569; stroke-width: 2.5; marker-end: url(#arrow); fill: none; }
+      .pill { rx: 18; ry: 18; }
+      .tag { font: 600 12px/1 Inter, system-ui, sans-serif; fill: #0f172a; }
+    </style>
+  </defs>
+  <!-- Header -->
+  <!-- Lane guides (optional, light) -->
+  <g
+     opacity="0.06"
+     id="g20"
+     transform="translate(0,-79.5)">
+    <line
+       x1="0"
+       y1="90"
+       x2="1200"
+       y2="90"
+       stroke="#334155"
+       id="line16" />
+    <line
+       x1="0"
+       y1="230"
+       x2="1200"
+       y2="230"
+       stroke="#334155"
+       id="line18" />
+  </g>
+  <!-- Inputs: Network + Input Parameters -->
+  <g
+     id="inputs"
+     transform="translate(30,0.50000001)">
+    <rect
+       width="210"
+       height="160"
+       class="card"
+       fill="#f8fafc"
+       id="rect22"
+       x="0"
+       y="0" />
+    <text
+       x="92"
+       y="24"
+       class="subtle"
+       id="text24"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:1.2;font-family:Inter, system-ui, sans-serif">Inputs</text>
+    <!-- Network mini-graphic -->
+    <rect
+       x="16"
+       y="38"
+       width="84"
+       height="84"
+       rx="10"
+       ry="10"
+       fill="#e0f2fe"
+       stroke="#93c5fd"
+       id="rect26" />
+    <g
+       transform="translate(16,38)"
+       id="g44">
+      <circle
+         cx="22"
+         cy="22"
+         r="6"
+         fill="#1d4ed8"
+         id="circle28" />
+      <circle
+         cx="62"
+         cy="28"
+         r="6"
+         fill="#1d4ed8"
+         id="circle30" />
+      <circle
+         cx="30"
+         cy="66"
+         r="6"
+         fill="#1d4ed8"
+         id="circle32" />
+      <circle
+         cx="70"
+         cy="62"
+         r="6"
+         fill="#1d4ed8"
+         id="circle34" />
+      <line
+         x1="22"
+         y1="22"
+         x2="62"
+         y2="28"
+         stroke="#1e3a8a"
+         stroke-width="2"
+         id="line36" />
+      <line
+         x1="22"
+         y1="22"
+         x2="30"
+         y2="66"
+         stroke="#1e3a8a"
+         stroke-width="2"
+         id="line38" />
+      <line
+         x1="62"
+         y1="28"
+         x2="70"
+         y2="62"
+         stroke="#1e3a8a"
+         stroke-width="2"
+         id="line40" />
+      <line
+         x1="30"
+         y1="66"
+         x2="70"
+         y2="62"
+         stroke="#1e3a8a"
+         stroke-width="2"
+         id="line42" />
+    </g>
+    <text
+       x="38"
+       y="138"
+       class="small"
+       id="text46"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:Inter, system-ui, sans-serif">Network</text>
+    <!-- Input parameters mini-graphic -->
+    <rect
+       x="118"
+       y="38"
+       width="76"
+       height="84"
+       rx="10"
+       ry="10"
+       fill="#fce7f3"
+       stroke="#f0abfc"
+       id="rect48" />
+    <g
+       transform="translate(118,46)"
+       id="g62">
+      <!-- sliders icon -->
+      <rect
+         x="8"
+         y="10"
+         width="60"
+         height="6"
+         fill="#9f1239"
+         opacity="0.25"
+         id="rect50" />
+      <rect
+         x="8"
+         y="28"
+         width="60"
+         height="6"
+         fill="#9f1239"
+         opacity="0.25"
+         id="rect52" />
+      <rect
+         x="8"
+         y="46"
+         width="60"
+         height="6"
+         fill="#9f1239"
+         opacity="0.25"
+         id="rect54" />
+      <circle
+         cx="28"
+         cy="13"
+         r="7"
+         fill="#be185d"
+         id="circle56" />
+      <circle
+         cx="44"
+         cy="31"
+         r="7"
+         fill="#be185d"
+         id="circle58" />
+      <circle
+         cx="20"
+         cy="49"
+         r="7"
+         fill="#be185d"
+         id="circle60" />
+    </g>
+    <text
+       x="108"
+       y="140"
+       class="small"
+       id="text64"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:Inter, system-ui, sans-serif">Input parameters</text>
+  </g>
+  <!-- Arrow: Inputs ➜ Simulator -->
+  <path
+     class="arrow"
+     d="m 240,80.5 c 60,0 70,0 110,0"
+     id="path67" />
+  <!-- Network Diffusion Simulator -->
+  <g
+     id="simulator"
+     transform="translate(350,0.50000001)">
+    <rect
+       width="230"
+       height="160"
+       class="card"
+       fill="#eef2ff"
+       id="rect69"
+       x="0"
+       y="0" />
+    <text
+       x="24"
+       y="26"
+       class="subtle"
+       id="text71"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:1.2;font-family:Inter, system-ui, sans-serif">Network diffusion simulator</text>
+    <!-- Little chart representing time-series output -->
+    <g
+       transform="translate(16,44)"
+       id="g83">
+      <rect
+         width="198"
+         height="90"
+         rx="10"
+         ry="10"
+         fill="#e5e7eb"
+         stroke="#cbd5e1"
+         id="rect73"
+         x="0"
+         y="0" />
+      <polyline
+         points="10,72 40,60 70,65 100,40 130,36 160,22 188,30"
+         fill="none"
+         stroke="#4338ca"
+         stroke-width="3"
+         id="polyline75" />
+      <line
+         x1="10"
+         y1="80"
+         x2="188"
+         y2="80"
+         stroke="#94a3b8"
+         stroke-width="1"
+         id="line77" />
+      <line
+         x1="10"
+         y1="20"
+         x2="10"
+         y2="80"
+         stroke="#94a3b8"
+         stroke-width="1"
+         id="line79" />
+      <text
+         x="50"
+         y="105"
+         class="small"
+         id="text81"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:normal;font-family:Inter, system-ui, sans-serif">time-series data</text>
+    </g>
+  </g>
+  <!-- Arrow: Simulator ➜ Graph Reduction (two streams: data and network) -->
+  <path
+     class="arrow"
+     d="m 580,86.5 c 40,0 60,0 110,0"
+     id="path88" />
+  <!-- Graph Reduction Module -->
+  <g
+     id="reduction"
+     transform="translate(690,0.50000001)">
+    <rect
+       width="230"
+       height="160"
+       class="card"
+       fill="#ecfeff"
+       id="rect90"
+       x="0"
+       y="0" />
+    <text
+       x="70"
+       y="26"
+       class="subtle"
+       id="text92"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:1.2;font-family:Inter, system-ui, sans-serif">Graph reduction</text>
+    <!-- Before/After network sketch -->
+    <g
+       transform="translate(10,44)"
+       id="g132">
+      <!-- full graph -->
+      <rect
+         x="0"
+         y="0"
+         width="90"
+         height="90"
+         rx="10"
+         ry="10"
+         fill="#cffafe"
+         stroke="#67e8f9"
+         id="rect94" />
+      <g
+         id="g118">
+        <circle
+           cx="22"
+           cy="22"
+           r="5"
+           fill="#0e7490"
+           id="circle96" />
+        <circle
+           cx="68"
+           cy="22"
+           r="5"
+           fill="#0e7490"
+           id="circle98" />
+        <circle
+           cx="22"
+           cy="68"
+           r="5"
+           fill="#0e7490"
+           id="circle100" />
+        <circle
+           cx="68"
+           cy="68"
+           r="5"
+           fill="#0e7490"
+           id="circle102" />
+        <circle
+           cx="45"
+           cy="45"
+           r="5"
+           fill="#0e7490"
+           id="circle104" />
+        <line
+           x1="22"
+           y1="22"
+           x2="68"
+           y2="22"
+           stroke="#155e75"
+           stroke-width="2"
+           id="line106" />
+        <line
+           x1="22"
+           y1="22"
+           x2="22"
+           y2="68"
+           stroke="#155e75"
+           stroke-width="2"
+           id="line108" />
+        <line
+           x1="68"
+           y1="22"
+           x2="68"
+           y2="68"
+           stroke="#155e75"
+           stroke-width="2"
+           id="line110" />
+        <line
+           x1="22"
+           y1="68"
+           x2="68"
+           y2="68"
+           stroke="#155e75"
+           stroke-width="2"
+           id="line112" />
+        <line
+           x1="22"
+           y1="22"
+           x2="45"
+           y2="45"
+           stroke="#155e75"
+           stroke-width="2"
+           id="line114" />
+        <line
+           x1="68"
+           y1="68"
+           x2="45"
+           y2="45"
+           stroke="#155e75"
+           stroke-width="2"
+           id="line116" />
+      </g>
+      <!-- arrow between before/after -->
+      <path
+         class="arrow"
+         d="m 98,45 c 10,0 22,0 32,0"
+         id="path120" />
+      <!-- reduced graph -->
+      <rect
+         x="140"
+         y="0"
+         width="74"
+         height="90"
+         rx="10"
+         ry="10"
+         fill="#bae6fd"
+         stroke="#7dd3fc"
+         id="rect122" />
+      <g
+         transform="translate(140)"
+         id="g130">
+        <circle
+           cx="20"
+           cy="30"
+           r="5"
+           fill="#1d4ed8"
+           id="circle124" />
+        <circle
+           cx="52"
+           cy="60"
+           r="5"
+           fill="#1d4ed8"
+           id="circle126" />
+        <line
+           x1="20"
+           y1="30"
+           x2="52"
+           y2="60"
+           stroke="#1e40af"
+           stroke-width="2.5"
+           id="line128" />
+      </g>
+    </g>
+  </g>
+  <!-- Arrow: Graph Reduction ➜ GNN-based Model -->
+  <!-- GNN-based Model (training) -->
+  <g
+     id="gnn"
+     transform="translate(1010,0.50000001)">
+    <rect
+       width="160"
+       height="160"
+       class="card"
+       fill="#f0fdf4"
+       id="rect139"
+       x="0"
+       y="0" />
+    <text
+       x="16"
+       y="26"
+       class="subtle"
+       id="text141"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:13px;line-height:1.2;font-family:Inter, system-ui, sans-serif">GNN-based model</text>
+    <!-- stylized neural layers -->
+    <g
+       transform="translate(20,46)"
+       id="g171">
+      <circle
+         cx="20"
+         cy="14"
+         r="6"
+         fill="#16a34a"
+         id="circle143" />
+      <circle
+         cx="20"
+         cy="46"
+         r="6"
+         fill="#16a34a"
+         id="circle145" />
+      <circle
+         cx="20"
+         cy="78"
+         r="6"
+         fill="#16a34a"
+         id="circle147" />
+      <circle
+         cx="66"
+         cy="14"
+         r="6"
+         fill="#16a34a"
+         id="circle149" />
+      <circle
+         cx="66"
+         cy="46"
+         r="6"
+         fill="#16a34a"
+         id="circle151" />
+      <circle
+         cx="66"
+         cy="78"
+         r="6"
+         fill="#16a34a"
+         id="circle153" />
+      <circle
+         cx="112"
+         cy="30"
+         r="6"
+         fill="#16a34a"
+         id="circle155" />
+      <circle
+         cx="112"
+         cy="62"
+         r="6"
+         fill="#16a34a"
+         id="circle157" />
+      <line
+         x1="26"
+         y1="14"
+         x2="60"
+         y2="14"
+         stroke="#166534"
+         stroke-width="2"
+         id="line159" />
+      <line
+         x1="26"
+         y1="46"
+         x2="60"
+         y2="46"
+         stroke="#166534"
+         stroke-width="2"
+         id="line161" />
+      <line
+         x1="26"
+         y1="78"
+         x2="60"
+         y2="78"
+         stroke="#166534"
+         stroke-width="2"
+         id="line163" />
+      <line
+         x1="72"
+         y1="14"
+         x2="106"
+         y2="30"
+         stroke="#166534"
+         stroke-width="2"
+         id="line165" />
+      <line
+         x1="72"
+         y1="46"
+         x2="106"
+         y2="62"
+         stroke="#166534"
+         stroke-width="2"
+         id="line167" />
+      <line
+         x1="72"
+         y1="78"
+         x2="106"
+         y2="62"
+         stroke="#166534"
+         stroke-width="2"
+         id="line169" />
+    </g>
+    <g
+       transform="translate(12,136)"
+       id="g177">
+      <rect
+         class="pill"
+         width="136"
+         height="22"
+         fill="#bbf7d0"
+         stroke="#86efac"
+         id="rect173"
+         x="0"
+         y="0" />
+      <text
+         x="68"
+         y="16"
+         text-anchor="middle"
+         class="tag"
+         id="text175"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:12px;line-height:1;font-family:Inter, system-ui, sans-serif">predict input parameters</text>
+    </g>
+  </g>
+  <!-- Dataflow tags under arrows -->
+  <!-- Footer note -->
+  <metadata
+     id="metadata1009">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>GRAFT Framework: Network Diffusion ➜ Graph Reduction ➜ GNN Training ➜ Parameter Prediction</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
